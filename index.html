@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤳</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preset Luz Natural – Download</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #c9a96e;
+    --gold-light: #e0c48a;
+    --orange: #f5a623;
+    --bg-dark: #0f0f0f;
+    --bg-mid: #1a1a1a;
+    --bg-card: #1e1e1e;
+    --text: #f0f0f0;
+    --text-muted: #aaa;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--bg-dark);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ---- HERO ---- */
+  .hero {
+    background: var(--bg-dark);
+    text-align: center;
+    padding: 64px 24px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: 50%;
+    transform: translateX(-50%);
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,169,110,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero .badge {
+    display: inline-block;
+    background: rgba(201,169,110,0.15);
+    border: 1px solid rgba(201,169,110,0.4);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-size: clamp(28px, 6vw, 48px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .hero p {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+
+  /* ---- DOWNLOAD CARD ---- */
+  .download-section {
+    background: var(--bg-mid);
+    padding: 56px 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .download-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(201,169,110,0.25);
+    border-radius: 20px;
+    padding: 48px 40px;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .download-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .download-card .icon-wrap {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: rgba(201,169,110,0.12);
+    border: 1px solid rgba(201,169,110,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px;
+    font-size: 36px;
+  }
+
+  .download-card h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .download-card .subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .includes-list {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .includes-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+
+  .includes-list li::before {
+    content: '✔';
+    color: var(--gold);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .btn-download {
+    display: block;
+    width: 100%;
+    background: var(--orange);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 18px 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: transform 0.15s, background 0.15s;
+    text-align: center;
+  }
+
+  .btn-download:hover {
+    background: #e8941a;
+    transform: translateY(-2px);
+  }
+
+  .btn-download:active {
+    transform: translateY(0);
+  }
+
+  .security-note {
+    margin-top: 16px;
+    font-size: 12px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* ---- HOW TO USE ---- */
+  .how-to {
+    background: var(--bg-dark);
+    padding: 64px 24px;
+    text-align: center;
+  }
+
+  .how-to h2 {
+    font-size: clamp(20px, 4vw, 30px);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .how-to h2 em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .how-to .lead {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 48px;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .step-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .step-num {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(201,169,110,0.15);
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 16px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 16px;
+  }
+
+  .step-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .step-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ---- ABOUT ---- */
+  .about {
+    background: var(--bg-mid);
+    padding: 64px 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-inner {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    max-width: 760px;
+    width: 100%;
+  }
+
+  .about-photo {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(201,169,110,0.4);
+    flex-shrink: 0;
+    background: var(--bg-card);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 40px;
+    overflow: hidden;
+  }
+
+  .about-text h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  .about-text .role {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+
+  /* ---- FOOTER ---- */
+  footer {
+    background: var(--bg-dark);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 28px 24px;
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+  }
+
+  /* ---- MOBILE ---- */
+  @media (max-width: 600px) {
+    .hero { padding: 48px 20px 40px; }
+    .hero .badge { font-size: 11px; letter-spacing: 1px; padding: 5px 14px; }
+    .hero p { font-size: 15px; margin-bottom: 32px; }
+    .hero a.btn-download { display: block !important; width: 100% !important; padding: 18px 20px !important; font-size: 16px !important; }
+    .how-to { padding: 48px 20px; }
+    .how-to .lead { margin-bottom: 32px; }
+    .steps-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .step-card { padding: 20px 14px; }
+    .step-card h3 { font-size: 13px; }
+    .step-card p { font-size: 12px; }
+    .download-section { padding: 40px 20px; }
+    .download-card { padding: 32px 20px; border-radius: 16px; }
+    .download-card h2 { font-size: 20px; }
+    .btn-download { font-size: 16px; padding: 16px 20px; }
+    .about { padding: 48px 20px; }
+    .about-inner { flex-direction: column; text-align: center; gap: 24px; }
+    .about-photo { margin: 0 auto; width: 90px; height: 90px; }
+    .about-text .role { font-size: 11px; letter-spacing: 1px; }
+    footer { padding: 24px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">✨ Seu arquivo está pronto</div>
+  <h1>Baixe agora o<br><em>Preset Luz Natural</em></h1>
+  <p>Transforme as cores das suas fotos com um toque. Feito para celular, com a estética da luz natural que todo mundo adora.</p>
+
+  <a href="download.html" class="btn-download" style="display:inline-block;width:auto;padding:18px 40px;font-family:'Montserrat',sans-serif;font-size:17px;font-weight:800;background:#f5a623;color:#fff;text-decoration:none;border-radius:12px;letter-spacing:0.5px;transition:transform 0.15s,background 0.15s;margin-bottom:12px;">
+    📥 Baixar Preset Agora
+  </a>
+  <p style="font-size:12px;color:#555;margin-top:4px;">🔒 Download seguro · Arquivo .dng / .xmp</p>
+</section>
+
+<!-- COMO USAR -->
+<section class="how-to" style="background:var(--bg-mid);">
+  <h2>Como <em>instalar</em> o preset</h2>
+  <p class="lead">Funciona no Lightroom Mobile (gratuito). Leva menos de 2 minutos.</p>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <h3>Baixe o arquivo</h3>
+      <p>Clique no botão acima e salve o arquivo no seu celular.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <h3>Abra no Lightroom</h3>
+      <p>Abra o Lightroom Mobile (grátis), crie um álbum e importe o arquivo.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <h3>Copie os ajustes</h3>
+      <p>Toque nos três pontos, escolha "Copiar ajustes" e aplique em qualquer foto.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">4</div>
+      <h3>Ajuste o gosto</h3>
+      <p>Use o controle de Exposição para calibrar a intensidade para a sua foto.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="download-section" style="background:var(--bg-dark);">
+  <div class="download-card">
+    <div class="icon-wrap">🌿</div>
+    <h2>Preset Luz Natural</h2>
+    <p class="subtitle">Compatível com Lightroom Mobile (gratuito).<br>Fácil de instalar, resultado imediato.</p>
+
+    <ul class="includes-list">
+      <li>Preset otimizado para fotos com luz natural</li>
+      <li>Funciona com qualquer câmera de celular</li>
+      <li>Guia de instalação incluso no arquivo</li>
+      <li>Acesso vitalício – seu arquivo, para sempre</li>
+    </ul>
+
+    <a href="download.html" class="btn-download">
+      📥 Baixar Preset Agora
+    </a>
+
+    <p class="security-note">🔒 Download seguro · Arquivo .dng / .xmp</p>
+  </div>
+</section>
+
+<!-- SOBRE EDUARDO -->
+<section class="about" style="background:var(--bg-mid);">
+  <div class="about-inner">
+    <div class="about-photo">
+      <img src="eduardobrito.jpg" alt="Eduardo Brito" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="about-text">
+      <h3>Eduardo Brito</h3>
+      <p class="role">📷 Fotógrafo Profissional · Embaixador Adobe Internacional</p>
+      <p>Eduardo passou mais de 10 anos fotografando pessoas e traduzindo esse conhecimento em métodos simples para quem quer evoluir com o celular. O Preset Luz Natural é uma das ferramentas que ele usa no dia a dia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Eduardo Brito · Todos os direitos reservados
+</footer>
+
+</body>
+</html>
